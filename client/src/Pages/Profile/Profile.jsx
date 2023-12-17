@@ -6,21 +6,21 @@ import Navbar from "../../components/Navbar";
 const Profile = () => {
   const [profileData, setProfileData] = useState(null);
 
-  useEffect(() => {
-    const fetchProfileData = async () => {
-      try {
-        const response = await axios.get("http://localhost:8090/api/user/profile");
-        if (response?.status === 200) {
-          setProfileData(response.data);
-        }
-      } catch (error) {
-        console.error("Error fetching profile data:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchProfileData = async () => {
+  //     try {
+  //       const response = await axios.get("http://localhost:8090/api/user/profile");
+  //       if (response?.status === 200) {
+  //         setProfileData(response.data);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching profile data:", error);
+  //     }
+  //   };
 
-    fetchProfileData();
-    console.log(profileData);
-  }, []);
+  //   fetchProfileData();
+  //   console.log(profileData);
+  // }, []);
   return (
     <Sidebar>
       <Navbar/>
