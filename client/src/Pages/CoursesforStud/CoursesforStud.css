@@ -1,0 +1,22 @@
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+  }
+  
+  .course-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .course-image {
+    background: gray; 
+    overflow: hidden;
+    border-radius: 8px;
+  }
