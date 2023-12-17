@@ -8,7 +8,7 @@ const EmailVerify = () => {
     const verification = async () => {
       try {
         const res = await axios.put(
-          `http://localhost:8090/api/auth/verify-email/${id}`
+          `https://rural-learn-api.vercel.app/api/auth/verify-email/${id}`
         );
         if (res && res.status === 200) {
           setFlag(true);
