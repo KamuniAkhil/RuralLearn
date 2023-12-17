@@ -8,7 +8,7 @@ const TeacherRoutes = () => {
   const [auth, setAuth] = useAuth();
   useEffect(() => {
     const authCheck = async () => {
-      const res = await axios.get(`http://localhost:8090/api/user/teacher`);
+      const res = await axios.get(`https://rural-learn-api.vercel.app/api/user/teacher`);
       if (res.data.ok) {
         setOk(true);
       } else {
