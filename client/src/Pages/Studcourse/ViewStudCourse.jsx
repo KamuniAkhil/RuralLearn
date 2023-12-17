@@ -28,7 +28,7 @@ const ViewStudCourse = () => {
     const getdata = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8090/api/v1/getSingleCourse/${id}`
+          `https://rural-learn-api.vercel.app/api/v1/getSingleCourse/${id}`
         );
         if (res?.status === 200) {
           console.log(res.data);
@@ -83,7 +83,7 @@ const ViewStudCourse = () => {
                   {selectedVideo && (
                     <div className="mt-4">
                       <video
-                        src={`http://localhost:8090/uploads/${selectedVideo.filename}`}
+                        src={`https://rural-learn-api.vercel.app/uploads/${selectedVideo.filename}`}
                         controls
                       ></video>
                       <button
@@ -111,7 +111,7 @@ const ViewStudCourse = () => {
                   {selectedNote && (
                     <div className="mt-4">
                       <iframe
-                        src={`http://localhost:8090/uploads/${selectedNote.filename}`}
+                        src={`https://rural-learn-api.vercel.app/uploads/${selectedNote.filename}`}
                         title="PDF Viewer"
                         width="800"
                         height="600"
