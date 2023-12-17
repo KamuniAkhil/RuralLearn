@@ -71,7 +71,7 @@ const HomePage = () => {
                 </div>
                 <div className="image">
                   <img
-                    src={`http://localhost:8090/uploads/${obj.coverImage.filename}`}
+                    src={`https://rural-learn-api.vercel.app/uploads/${obj.coverImage.filename}`}
                     alt=""
                   />
                 </div>
