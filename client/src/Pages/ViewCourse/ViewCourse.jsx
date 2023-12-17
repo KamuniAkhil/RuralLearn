@@ -19,7 +19,7 @@ const ViewCourse = () => {
     const getCourse = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8090/api/user/getSingleTeacherAllCourses/${auth?.user?._id}`
+          `https://rural-learn-api.vercel.app/api/user/getSingleTeacherAllCourses/${auth?.user?._id}`
         );
 
         if (res?.status === 200) {
@@ -49,7 +49,7 @@ const ViewCourse = () => {
       formData.append("price", price);
       formData.append("coverImage", coverImage);
       const res = await axios.put(
-        `http://localhost:8090/api/user/updateCourse/${id}`,
+        `https://rural-learn-api.vercel.app/api/user/updateCourse/${id}`,
         formData,
         {
           headers: {
@@ -69,7 +69,7 @@ const ViewCourse = () => {
   const handleDelete = async (id) => {
     try {
       const res = await axios.delete(
-        `http://localhost:8090/api/user/removeCourse/${id}`
+        `https://rural-learn-api.vercel.app/api/user/removeCourse/${id}`
       );
       if (res?.status === 200) {
         alert("Course deleted Successfully");
@@ -102,7 +102,7 @@ const ViewCourse = () => {
                 <td style={tableCellStyle}>{obj.title}</td>
                 <td style={tableCellStyle}>
                   <img
-                    src={`http://localhost:8090/uploads/${obj.coverImage.filename}`}
+                    src={`https://rural-learn-api.vercel.app/uploads/${obj.coverImage.filename}`}
                     alt=""
                     style={tableImageStyle}
                   />
