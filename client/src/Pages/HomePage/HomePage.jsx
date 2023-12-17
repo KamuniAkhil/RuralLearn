@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SidebarHome from "../../components/SidebarHome";
 import NavbarHome from "./../../components/NavbarHome";
-import AboutUs from "../../components/AboutUs.Jsx";
+// import AboutUs from "../../components/AboutUs.Jsx";
 import axios from "axios";
 import { useAuth } from "../../context/AuthProvider";
 import "./HomePage.css";
