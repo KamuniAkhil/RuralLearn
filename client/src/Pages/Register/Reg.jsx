@@ -27,7 +27,7 @@ const Reg = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8090/api/auth/register",
+        "https://rural-learn-api.vercel.app/api/auth/register",
         formData
       );
       if (response?.status === 201) {
@@ -66,7 +66,7 @@ const Reg = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8090/api/auth/login",
+        "https://rural-learn-api.vercel.app/api/auth/login",
         formDataLog
       );
       if (res && res.data.success) {
