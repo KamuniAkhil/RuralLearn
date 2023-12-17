@@ -109,7 +109,7 @@ const HomePage = () => {
       </div>
       <br></br>
       <br></br>
-      <AboutUs/>
+{/*       <AboutUs/> */}
       <br></br>
       <br></br>
     </SidebarHome>
