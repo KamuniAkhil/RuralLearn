@@ -24,7 +24,7 @@ const Quiz = () => {
     const getCourse = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8090/api/user/getSingleTeacherAllCourses/${auth?.user?._id}`
+          `https://rural-learn-api.vercel.app/api/user/getSingleTeacherAllCourses/${auth?.user?._id}`
         );
 
         if (res?.status === 200) {
@@ -50,7 +50,7 @@ const Quiz = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `http://localhost:8090/api/user/addQuiz/${id}`,
+        `https://rural-learn-api.vercel.app/api/user/addQuiz/${id}`,
         {
           question,
           options,
@@ -79,7 +79,7 @@ const Quiz = () => {
             <div key={obj._id} style={gridItemStyle}>
               <h3>{obj.title}</h3>
               <img
-                src={`http://localhost:8090/uploads/${obj.coverImage.filename}`}
+                src={`https://rural-learn-api.vercel.app/uploads/${obj.coverImage.filename}`}
                 alt=""
                 style={imageStyle}
               />
