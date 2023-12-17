@@ -25,3 +25,7 @@ const port = process.env.PORT || 8000;
     console.log(error);
   }
 })();
+
+app.get('/',(req,res)=>{
+  res.send("Hello World!");
+})
