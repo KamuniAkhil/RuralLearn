@@ -35,7 +35,7 @@ const HomePage = () => {
         return;
       }
       const res = await axios.put(
-        `http://localhost:8090/api/v1/updateEnroll/${id}?studId=${auth?.user?._id}`
+        `https://rural-learn-api.vercel.app/api/v1/updateEnroll/${id}?studId=${auth?.user?._id}`
       );
 
       if (res?.status === 200) {
