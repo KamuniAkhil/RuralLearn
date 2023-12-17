@@ -8,7 +8,12 @@ const cors = require("cors");
 app.use("/uploads", express.static("./uploads"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors());
+app.use(cors({
+  origin:["https://rural-learn-app.vercel.app"],
+  methods:["POST","GET","PUT","DELETE"],
+  credentials:true
+}  
+));
 //routes
 app.use("/api/auth", authRoutes);
 app.use("/api/user", require("./routes/courseRoutes"));
