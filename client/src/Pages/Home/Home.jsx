@@ -27,7 +27,7 @@ const Home = () => {
     try {
       console.log(auth?.user);
       const res = await axios.put(
-        `http://localhost:8090/api/v1/updateEnroll/${id}?studId=${auth?.user?._id}`
+        `https://rural-learn-api.vercel.app/api/v1/updateEnroll/${id}?studId=${auth?.user?._id}`
       );
       if (res?.status == 200) {
         alert("Congratulations you are enrolled in this course");
@@ -63,7 +63,7 @@ const Home = () => {
                 </div>
                 <div className="image">
                   <img
-                    src={`http://localhost:8090/uploads/${obj.coverImage.filename}`}
+                    src={`https://rural-learn-api.vercel.app/uploads/${obj.coverImage.filename}`}
                     alt=""
                   />
                 </div>
