@@ -17,7 +17,7 @@ const StudQuiz = () => {
     const fetchQuiz = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8090/api/v1/getQuiz/${id}`
+          `https://rural-learn-api.vercel.app/api/v1/getQuiz/${id}`
         );
         if (res?.status === 200) {
           const { data } = res;
