@@ -11,7 +11,7 @@ const Home = () => {
   
   useEffect(() => {
     const getAllCourses = async () => {
-      const res = await axios.get("http://localhost:8090/api/v1/allcourses");
+      const res = await axios.get("https://rural-learn-api.vercel.app/api/v1/allcourses");
       if (res?.status === 200) {
         const { data } = res;
         console.log(data);
