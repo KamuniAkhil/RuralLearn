@@ -32,7 +32,7 @@ const Addcourse = () => {
       });
 
       const response = await axios.post(
-        `http://localhost:8090/api/user/addCourse?authId=${auth?.user?._id}`,
+        `https://rural-learn-api.vercel.app/api/user/addCourse?authId=${auth?.user?._id}`,
         formData,
         {
           headers: {
