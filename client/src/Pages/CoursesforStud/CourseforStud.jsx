@@ -12,7 +12,7 @@ const CourseforStud = () => {
     const getCorsesforStud = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:8090/api/v1/getAllstudentCourse/${auth?.user?._id}`
+          `https://rural-learn-api.vercel.app/api/v1/getAllstudentCourse/${auth?.user?._id}`
         );
         if (data) {
           setArr(data?.courses);
